@@ -1,0 +1,158 @@
+* {
+    margin: auto;
+    padding: 0;
+    background-color: aqua;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+
+div#logo {
+    position: absolute;
+    top: 10px;
+}
+
+#page1 {
+    height: 100vh;
+    width: auto;
+
+}
+
+#nav {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center-align content vertically */
+    justify-content: center;
+}
+
+#logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+
+}
+
+#nav h1.links {
+    padding-right: 10px;
+    margin: 5px;
+    text-align: left;
+}
+
+#nav h1 {
+    display: flex;
+    /* Use flexbox */
+    flex-direction: row;
+    /* Stack elements vertically */
+    padding: inherit;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: left;
+    align-items: center;
+    /* Center-align content horizontally */
+    justify-content: center;
+    /* Center-align content vertically */
+
+}
+
+.nav h1 {
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+h2 {
+    font-weight: 1000;
+    font-size: 100px;
+    color: rgb(0, 255, 42);
+    text-align: center;
+    margin-top: 100px;
+}
+
+#page2 {
+    height: 100vh;
+    width: auto;
+}
+
+/* Style for the container div */
+.container {
+    display: flex;
+    /* Use flexbox */
+    height: 100vh;
+    /* Set the container's height to 100% of the viewport height */
+}
+
+/* Style for the left column */
+.left-column {
+    flex: 1;
+    /* Take up 50% of the container's width */
+    background-color: #f0f0f0;
+}
+
+/* Style for the right column */
+.right-column {
+    flex: 1;
+    /* Take up 50% of the container's width */
+    background-color: #e0e0e0;
+}
+
+.rank hr {
+    width: 80%;
+    /* Set the width of the horizontal line */
+    margin: 10px auto;
+    /* Center the line and add spacing */
+    border: none;
+    /* Remove default border */
+    border-top: 1px solid #333;
+    /* Customize border appearance */
+}
+
+.position {
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.position img {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+
+}
+.brand{
+    font-size: 15px;
+    margin-top: inherit;
+}
+
+.worth {
+    font-size: 20px;
+    padding-left: 150px;
+
+}
+
+/* Style for the rank container */
+.rank {
+    display: flex;
+    /* Use flexbox to make elements appear in one line */
+    align-items: center;
+    /* Align items vertically within the container */
+    flex-direction: column;
+    /* Stack elements vertically */
+    
+}
+
+
+p {
+    text-align: left;
+    padding-right: 20px;
+}
+h2.left {
+    margin-top: 0px;
+}
