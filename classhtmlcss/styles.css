@@ -1,0 +1,64 @@
+h1 {
+    font-family: verdana;
+    font-size: 150%;
+  }
+
+  p {
+    color: red;
+    font-family: courier;
+    font-size: 110%;
+  }
+
+.biggest {
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.border {
+    border: 2px solid greenyellow;
+    padding: 30px;
+    /* margin: 50px; */
+}
+
+
+.backimage {
+  background-image: url('anotherone.jfif');
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+
