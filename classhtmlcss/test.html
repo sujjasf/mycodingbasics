@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    picture {
+        display: block;
+        margin: 20px auto;
+        /* Add margin to center the picture vertically and horizontally */
+    }
+
+    img {
+        max-width: 100%;
+        /* Ensure the image doesn't exceed the container's width */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Optional: Add a shadow effect */
+    }
+
+    @media (min-width: 768px) {
+        img {
+            max-width: 90%;
+            /* Set the maximum width of the image to 90% of the viewport width for larger screens */
+        }
+    }
+</style>
+
 <body>
 
-<h2>The picture Element</h2>
+    <h2>The picture Element</h2>
+    <div class="container">
+        <picture>
+            <source media="(min-width: 650px)" srcset="walpaper.jpg">
+            <source media="(min-width: 465px)" srcset="coffee6.jfif">
+            <img src="anotherone.jfif" style="width:auto;">
+        </picture>
+    </div>
+    <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+        The browser looks for the first source element where the media query matches the user's current viewport width,
+        and fetches the image specified in the srcset attribute.</p>
 
-<picture>
-  <source media="(min-width: 650px)" srcset="walpaper.jpg">
-  <source media="(min-width: 465px)" srcset="coffee6.jfif">
-  <img src="anotherone.jfif" style="width:auto;">
-</picture>
-
-<p>Resize the browser to see different versions of the picture loading at different viewport sizes.
-The browser looks for the first source element where the media query matches the user's current viewport width,
-and fetches the image specified in the srcset attribute.</p>
-
-<p>The img element is required as the last child tag of the picture declaration block.
-The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
-</p>
+    <p>The img element is required as the last child tag of the picture declaration block.
+        The img element is used to provide backward compatibility for browsers that do not support the picture element,
+        or if none of the source tags matched.
+    </p>
 
 </body>
-</html>
 
+</html>
