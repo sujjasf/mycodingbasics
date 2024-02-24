@@ -3,26 +3,31 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
+
 .container {
   max-width: 100%;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
 }
+
 nav {
   background-color: #333;
   padding: 10px 0;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
+
 nav ul li {
   display: inline;
   margin-right: 20px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -31,45 +36,53 @@ nav ul li a {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
+
 nav ul li a:hover {
   background-color: #555;
 }
+
 picture {
   display: block;
-  margin: 20px auto; /* Add margin to center the picture vertically and horizontally */
+  margin: 20px auto;
+  /* Add margin to center the picture vertically and horizontally */
 }
+
 img {
-  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  max-width: 100%;
+  /* Ensure the image doesn't exceed the container's width */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a shadow effect */
 }
+
 @media (min-width: 768px) {
   img {
-      max-width: 90%; /* Set the maximum width of the image to 90% of the viewport width for larger screens */
+    max-width: 90%;
+    /* Set the maximum width of the image to 90% of the viewport width for larger screens */
   }
 }
 
 h1 {
-    font-family: verdana;
-    font-size: 150%;
-  }
+  font-family: verdana;
+  font-size: 150%;
+}
 
-  p {
-    color: red;
-    font-family: courier;
-    font-size: 110%;
-  }
+p {
+  color: red;
+  font-family: courier;
+  font-size: 110%;
+}
 
 .biggest {
-    font-family: monospace;
-    font-size: 50px;
+  font-family: monospace;
+  font-size: 50px;
 }
 
 .border {
-    border: 2px solid greenyellow;
-    padding: 30px;
-    /* margin: 50px; */
+  border: 2px solid greenyellow;
+  padding: 30px;
+  /* margin: 50px; */
 }
 
 
@@ -78,29 +91,31 @@ h1 {
 }
 
 a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-  a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-  }
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:link, a:visited {
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:link,
+a:visited {
   background-color: #f44336;
   color: white;
   padding: 15px 25px;
@@ -109,8 +124,82 @@ a:link {
   display: inline-block;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   background-color: red;
 }
+
+table,
+th,
+td {
+  border: 2px solid rgb(103, 208, 17);
+  /* border-collapse: collapse; This will make the borders collapse into a single border */
+}
+
+th,
+td {
+  background-color: #96D4D4;
+  border-radius: 6px;
+  border-style: dotted;
+  /* border-style: dotted; */
+}
+
+/* Border Styles
+dotted     
+dashed     
+solid     
+double     
+groove     
+ridge     
+inset     
+outset     
+none     
+hidden */
+
+tr:nth-child(even) {
+  background-color: rgba(0, 255, 255, 0.722);
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  background-color: rgba(0, 255, 8, 0.4);
+}
+
+tr:hover {
+  background-color: #1100ff;
+}
+
+div.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+div.mycontainer div {
+  width:33%;  
+  float:left;
+}
+
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: rgb(149, 255, 0);
+  color: white;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 
