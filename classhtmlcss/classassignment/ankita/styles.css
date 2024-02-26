@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    
+}
+.logo {
+    padding-left:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+}
+
+.navigation {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    background-color: rgb(136, 197, 197);
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: rgb(136, 197, 197);
+}
+
+p {
+    font-size:larger;
+    color: rgb(171, 232, 41);
+    font-synthesis-weight: 600;
+}
+.first-page {
+    background-image: url('Untitled design.png'); /* Adjust file path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh; /* Adjust height as needed */
+    /* width: 100vw; Remove this line to allow the container to expand horizontally */
+    overflow: hidden;
+}
+
+.container2 {
+        background-image: url('Untitled design.png'); /* Adjust file path */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency (last value) */
+    /* Remove the height and width properties to allow the container to expand vertically and horizontally */
+    overflow: hidden;
+}
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333; /* Change color to match your design */
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff; /* Change color on hover */
+}
+#contact, #portfolio, #about {
+    height: 100vh;
+}
+
+img {
+    height: 500px;
+    width: auto;
+}
+
+
+/* Add some padding to the top of the "Portfolio" section */
+#contact {
+    padding-top: 600px; /* Adjust as needed */
+}
