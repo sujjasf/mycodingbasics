@@ -1,0 +1,20 @@
+what is data structure?
+The data structure is basically a technique of organizing and storing of different types of dataitems in computer memory. It is considered as not only the storing of data elements also the maintaining of the logical realtionship existing vetween individual data elements  IT can also be defined as a mahtematical or logical model, which relates to a particular organization of different data elements.
+Thus, a data structure is the portion of memory allocated for a model, in which required data can be arranged in proper fashion. Data structure mainly specifies the following four things...
+i). Organization of data.
+ii). Accessing methods
+iii). Degree of associativity
+iv). processing alternatives for information
+
+Need of Data Structures
+As applications are getting complex and amount of data is increasing day by day there may arise the following problems:
+i). Processor speed : To handle very large amount of data, high speed processing is required, but as the data is growing day by day to the billions of files
+per entity, processor may fail to deal with that much amount of data
+
+ii). Data Search : Consider an inventory size of 500 items in a store; if our applicaton needs to search for a particular item, it needs to traverse 500 items every time, results in slowing down the search process.
+
+iii). Multiple requests : If thousands of users are searching the data simultaneously on a web server, then there are the chances that a very large server can be failed during that process.
+In order to solve these problems, data structures are used. Data is organized to form a data structure in such a way that all items are not required to be searched and required data can be searched instantly.
+
+Data Structure Classification.....
+As 

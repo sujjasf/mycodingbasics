@@ -1,0 +1,10 @@
+first to run java file
+navigate to the folder where java file is located..
+in terminal:
+cd path\to\directory
+
+To compile in terminal:
+PS E:\notes\java> javac max.java
+
+then to run in terminal:
+PS E:\notes\java> java max

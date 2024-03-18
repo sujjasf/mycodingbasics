@@ -1,0 +1,23 @@
+First In First Out
+priority queue
+
+the priority queue 
+service goes to highest priority
+
+
+
+
+1. Insert:
+at the First
+at the end
+before an item
+after an item
+
+2. Deletion:
+from front
+from end
+any item
+
+3. List
+
+
