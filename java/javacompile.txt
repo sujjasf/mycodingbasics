@@ -8,3 +8,10 @@ PS E:\notes\java> javac max.java
 
 then to run in terminal:
 PS E:\notes\java> java max
+
+
+
+to run and compile in one command:
+javac classstu.java ; java classstu
+
+
