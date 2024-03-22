@@ -8,6 +8,9 @@ int main() {
         return 1;
     }
 
+
+
+
     *num_ptr = 42;
 
     printf("Dynamic number : %d\n", *num_ptr);
