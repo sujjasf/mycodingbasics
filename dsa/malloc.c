@@ -11,6 +11,11 @@ int main() {
 
 
 
+
+
+
+
+
     *num_ptr = 42;
 
     printf("Dynamic number : %d\n", *num_ptr);
