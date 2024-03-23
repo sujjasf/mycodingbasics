@@ -6,7 +6,7 @@
 #define TRUE 1
 #define FALSE 0
 
-coid main()
+void main()
 {
     char exp[MAX];
     struct stack s;
