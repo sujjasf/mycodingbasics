@@ -30,6 +30,8 @@ int pop() {
     }
 }
 
+
+
 void display() {
     if(top == -1) {
         printf("Stack is empty\n");
