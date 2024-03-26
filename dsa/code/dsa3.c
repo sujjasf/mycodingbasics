@@ -6,6 +6,8 @@
 int stack[MAX_SIZE];
 int top = -1;
 
+
+
 void push(int element) {
     if(top >= MAX_SIZE - 1) {
         printf("Stack Overflow\n");
