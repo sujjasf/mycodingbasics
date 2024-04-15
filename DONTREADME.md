@@ -10,3 +10,5 @@ hello
 
 really hope to learn a lot this year
 rn in ktm bus trying to commit...
+buld trying his hard to write sujjal..
+bbut progress is not going well
