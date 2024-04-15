@@ -7,4 +7,6 @@ Imma tryna make this my year ./lol
 
 
 hello
+
 really hope to learn a lot this year
+rn in ktm bus trying to commit...
