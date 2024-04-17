@@ -14,3 +14,6 @@ buld trying his hard to write sujjal..
 bbut progress is not going well
 ok but this is last commit out of 4 but 
 i have missed two previous days missing in u right-top
+
+now i'm in mamala
+jhapa damak
