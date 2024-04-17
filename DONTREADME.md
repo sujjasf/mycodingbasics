@@ -19,3 +19,5 @@ now i'm in mamala
 jhapa damak
 using mobile to write u
 tomorrow is bartamaof sonim and sunab
+
+It's been a busy month ain't got time for github but when i get home i will commit for sure
