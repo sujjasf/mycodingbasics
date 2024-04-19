@@ -21,3 +21,6 @@ using mobile to write u
 tomorrow is bartamaof sonim and sunab
 
 It's been a busy month ain't got time for github but when i get home i will commit for sure
+
+now i am home and i told didi that i willlllllllll study from now on now no ghuming
+studying pani garne>😁
