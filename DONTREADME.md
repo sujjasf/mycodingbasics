@@ -26,4 +26,6 @@ now i am home and i told didi that i willlllllllll study from now on now no ghum
 studying pani garne>😁
 now to make some changes in the directory
 
-this is the second last commit of today and i am still doing alxi
+this is the second last commit of today and i am still doing alxi..
+this is the last commit and now tomorrow will be my day and my year web ko project ni sakaunu parne
+
