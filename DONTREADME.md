@@ -17,6 +17,7 @@ i have missed two previous days missing in u right-top
 
 now i'm in mamala
 jhapa damak
+ok
 using mobile to write u
 tomorrow is bartamaof sonim and sunab
 
