@@ -64,7 +64,8 @@ public class BankMgmt {
 
     static double withDraw(double balance) {
         System.out.print("Enter the withdraw ammount : ");
-        double witDAmount = scanner.nextDouble();
+        double witDAm
+        ount = scanner.nextDouble();
         if (witDAmount > balance) {
             System.out.println("Insufficient funds!");
         } else {
@@ -73,7 +74,6 @@ public class BankMgmt {
             // System.out.println();
             System.out.printf("Balance withdrawn new balance is : %.2f", balance);
         }
-            System.out.printf("Balanc
         System.out.println();
         return balance;
     }
