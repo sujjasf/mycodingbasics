@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Main {
+public class MusicPlayer {
     public static void main(String[] args) {
 
         // How to play audio with java (.wav, .au, .aiff)

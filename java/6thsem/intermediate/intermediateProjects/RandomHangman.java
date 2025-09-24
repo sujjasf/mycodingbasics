@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
-public class HangmanGame {
+public class RandomHangman {
     public static void main(String[] args) {
 
         String filePath = "HangmanRandom.txt";
