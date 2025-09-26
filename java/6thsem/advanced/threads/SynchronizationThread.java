@@ -5,6 +5,7 @@
 //     public int getCount() { return count; }
 // }
 
+// With synchronization (correct results):
 class SafeCounter {
     private int count = 0;
     public synchronized void increment() { count++; }
