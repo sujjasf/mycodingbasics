@@ -18,7 +18,7 @@ public class GenericExample {
         swap(numsf, 0, 2);
         System.out.println(Arrays.toString(numsf));
 
-        Double[] numsd = {1.3, 2.3, 3d, 4d, 5d};
+        Double[] numsd = {1.3, 2.3, 3d, 4.3, 5d};
         swap(numsd, 0, 2);
         System.out.println(Arrays.toString(numsd));
 
