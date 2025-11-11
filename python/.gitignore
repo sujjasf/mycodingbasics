@@ -1,1 +1,28 @@
+# Ignore Python cache folders
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore pytest cache
+.pytest_cache/
+# Ignore virtual environments
 venv/
+.env/
+
+# Ignore environment variable files
+*.env
+
+# Ignore macOS system files (optional)
+.DS_Store
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore build and distribution folders
+build/
+dist/
+*.egg-info/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/

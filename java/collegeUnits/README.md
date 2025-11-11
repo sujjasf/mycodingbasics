@@ -16,3 +16,15 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+Compile:
+mkdir -p bin
+javac -d bin src/unit2/*.java
+
+Copy resource so it's on the runtime classpath:
+mkdir -p bin/unit2
+cp src/unit2/backgound.jpg bin/unit2/
+
+Run:
+java -cp bin unit2.MyImage
