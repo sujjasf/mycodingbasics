@@ -1,0 +1,68 @@
+// Create a frame with a button, once you click dialog box will appear, 
+// using the dialog box take two numberrs from the user and display sum of them on it.
+
+package unit1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class DialogBoxTry2 {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("Try!!!");
+        f.setSize(400, 400);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setLayout(null);
+
+        JTextField tf1 = new JTextField();
+        tf1.setBounds(30, 30, 150, 30);
+        f.add(tf1);
+
+        JTextField tf2 = new JTextField();
+        tf2.setBounds(30, 70, 150, 30);
+        f.add(tf2);
+
+        JButton b1 = new JButton("Click ");
+        b1.setBounds(30, 120, 100, 30);
+        f.add(b1);
+
+        b1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JDialog d;
+                JLabel n1, n2, result;
+                JTextField tn1, tn2;
+                JButton dispaly;
+
+                d = new JDialog();
+                d.setBounds(100, 100, 250, 300);
+                d.setLayout(new FlowLayout);
+                n1 = new JLabel("Number 1: ");
+                tn1 = new JTextField(10);
+                n2 = new JLabel("NUmber 2: ");
+                tn2 = new JTextField(10);
+                int num1 = Integer.parseInt(tf1.getText());
+                int num2 = Integer.parseInt(tf2.getText());
+                int sum = num1 + num2;
+
+                JDialog d = new JDialog(f, "Result", true);
+                d.setLayout(null);
+                d.setSize(200, 150);
+                // d.setBounds(50, 50, 200, 200);
+                JLabel l = new JLabel("Sum : " + sum);
+
+                l.setBounds(20, 20, 150, 30);
+                d.add(l);
+                d.setVisible(true);
+
+            }
+        });
+        f.setVisible(true);
+
+    }
+}
