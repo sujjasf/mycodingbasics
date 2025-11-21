@@ -16,3 +16,7 @@ class Reservation(models.Model):
     guest_count = models.IntegerField()
     reservation_time = models.DateField(auto_now=True)
     comments = models.CharField(max_length=1000)
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()

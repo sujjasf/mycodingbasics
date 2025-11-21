@@ -1,0 +1,14 @@
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+
+def home(request):
+    return render(request, 'menu/home.html')
+
+def about(request):
+    return render(request, 'menu/about.html')
+
+def book(request):
+    return render(request, 'menu/book.html')

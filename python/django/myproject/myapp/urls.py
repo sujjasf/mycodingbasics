@@ -7,4 +7,5 @@ urlpatterns = [
     path('sujjal/', views.HelloSujjal.as_view(), name='sujjal'),
     path('function/', views.home, name='function'),
     path('class/', views.HelloSujjal.as_view(), name='class'),
+    path('reservation', views.index)
 ]
