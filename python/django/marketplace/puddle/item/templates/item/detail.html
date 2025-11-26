@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+{{ item.name }}
+{% endblock %}
+
+{% block content %}
+
+<div class="grid grid-cols-5 gap-6">
+    <div class="col-span-3">
+        {% if item.image %}
+            <img src="{{ item.image.url }}" class="rounded-xl" alt="{{ item.name }}">
+        {% else %}
+            <!-- Optional: show a placeholder image or nothing -->
+            <div class="w-full h-64 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400">No image</div>
+        {% endif %}
+    </div>
+    <div class="col-span-2">
+        <h1 class="text-2xl font-semibold">{{ item.name }}</h1>
+        <p class="text-gray-600">{{ item.description }}</p>
+        <p class="mt-4 font-bold">Price: {{ item.price }}</p>
+    </div>
+    <a href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Seller</a>
+</div>
+
+<div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center">Related Items </h2>
+
+    <div class="gird grid-col-3 gap-3">
+        {% for item in related_items %}
+            <div>
+                <a href="{% url 'item:detail' item.id %}">
+                    <div>
+                        <img src="{{ item.image.url}}" class="rounded-t-xl" alt="">
+                    </div>
+
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <h2 class="text-2xl">{{ item.name }}</h2>
+                        <p class="text-gray-500">Price: {{ item.price }}</p>
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}
