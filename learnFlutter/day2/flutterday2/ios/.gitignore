@@ -1,0 +1,30 @@
+## Xcode
+**/DerivedData/
+**/xcuserdata/
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+
+## CocoaPods
+**/Pods/
+**/.symlinks/
+Podfile.lock
+
+## Flutter
+Flutter/ephemeral/
+Flutter/Generated.xcconfig
+Flutter/App.framework
+Flutter/Flutter.framework
+Flutter/Flutter.podspec
+Flutter/flutter_export_environment.sh
+
+## Build
+Flutter/app.flx
+Flutter/app.zip
+
+## Generated plugin registrant
+Runner/GeneratedPluginRegistrant.*
+
+# End of file

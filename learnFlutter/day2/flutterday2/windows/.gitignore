@@ -1,0 +1,14 @@
+## Windows / Visual Studio
+**/flutter/ephemeral/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+x64/
+x86/
+
+# Visual Studio cache files
+*.[Cc]ache
+!*.[Cc]ache/
+
+# End of file

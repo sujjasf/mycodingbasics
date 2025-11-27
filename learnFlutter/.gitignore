@@ -1,0 +1,68 @@
+## Flutter / Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub/
+.pub-cache/
+build/
+
+## Generated files
+*.lock
+.generated/
+
+## IDEs and editors
+.idea/
+*.iml
+.vscode/
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+## OS files
+.DS_Store
+*.class
+*.log
+*.pyc
+*.swp
+
+## Test / coverage
+coverage/
+
+## Android
+**/android/**/local.properties
+**/android/**/GeneratedPluginRegistrant.*
+**/android/**/key.properties
+**/*.keystore
+**/*.jks
+/android/.gradle
+/captures/
+
+## iOS
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Runner.xcworkspace
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+## macOS
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+
+## Windows
+**/windows/flutter/ephemeral/
+
+## Linux
+**/linux/flutter/ephemeral/
+
+## Generated plugin registrant
+**/GeneratedPluginRegistrant.*
+
+## Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# End of file
+# Coverage

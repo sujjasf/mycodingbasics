@@ -1,0 +1,9 @@
+## macOS Flutter
+**/Flutter/ephemeral/
+**/Pods/
+
+## Xcode
+**/DerivedData/
+**/xcuserdata/
+
+# End of file
