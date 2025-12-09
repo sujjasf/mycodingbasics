@@ -28,7 +28,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   int selectedIndex = 1;
+
+  int selectedCategory = 0;
+
+  final List<String> categories = [
+    "All",
+    "Mobile",
+    "Laptops",
+    "Watches",
+    "Tablets",
+    "Accessories",
+    "Headphones",
+    "Camera",
+  ];
+
+  // MAIN PRODUCT LIST
+  final List<Map<String, dynamic>> products = [
+    {"name": "iPhone 15 Pro", "price": 1299, "img": "product1.png", "category": "Mobile"},
+    {"name": "MacBook Air M2", "price": 1499, "img": "product2.jpg", "category": "Laptops"},
+    {"name": "Samsung Watch 6", "price": 299, "img": "product3.jpeg", "category": "Watches"},
+    {"name": "iPad Pro 12.9", "price": 999, "img": "product4.jpeg", "category": "Tablets"},
+    {"name": "Sony Headphones", "price": 199, "img": "product5.jpg", "category": "Headphones"},
+    {"name": "Canon DSLR", "price": 899, "img": "product6.jpg", "category": "Camera"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +61,16 @@ class _HomePageState extends State<HomePage> {
         children: [
           buildTopBar(),
           buildCategoryList(),
-          buildProductGrid()
+          buildProductGrid(),
         ],
       ),
       bottomNavigationBar: buildBottomBar(),
     );
   }
 
-  // Top Bar
+  // ----------------------
+  //       TOP BAR
+  // ----------------------
   Widget buildTopBar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
@@ -52,7 +78,6 @@ class _HomePageState extends State<HomePage> {
         children: [
           Icon(Icons.menu, size: 28),
 
-          // Search Bar
           Expanded(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 16),
@@ -70,7 +95,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-
               child: Row(
                 children: [
                   Icon(Icons.search, color: Colors.grey),
@@ -83,25 +107,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+
           Icon(Icons.notifications_none, size: 28),
         ],
       ),
     );
   }
 
-  final List<String> categories = [
-    "All",
-    "Mobile",
-    "Laptops",
-    "Watches",
-    "Tablets",
-    "Accessories",
-    "Headphones",
-    "Camera",
-  ];
-
-  int selectedCategory = 0;
-
+  // ----------------------
+  //     CATEGORY LIST
+  // ----------------------
   Widget buildCategoryList() {
     return Container(
       height: 45,
@@ -110,7 +125,7 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         padding: EdgeInsets.symmetric(horizontal: 16),
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (context, index) {
           bool isSelected = selectedCategory == index;
 
           return GestureDetector(
@@ -146,20 +161,22 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  final List<Map<String, dynamic>> products = [
-    {"name": "iPhone 15 Pro", "price": 1299, "img": "product1.png"},
-    {"name": "MacBook Air M2", "price": 1499, "img": "product2.jpg"},
-    {"name": "Samsung Watch 6", "price": 299, "img": "product3.jpeg"},
-    {"name": "iPad Pro 12.9", "price": 999, "img": "product4.jpeg"},
-    {"name": "Sony Headphones", "price": 199, "img": "product5.jpg"},
-    {"name": "Canon DSLR", "price": 899, "img": "product6.jpg"},
-  ];
-
+  // ------------------------
+  //     PRODUCT GRID
+  // ------------------------
   Widget buildProductGrid() {
+
+    // FILTER LOGIC
+    String selectedCategoryName = categories[selectedCategory];
+
+    List filteredProducts = selectedCategoryName == "All"
+        ? products
+        : products.where((item) => item["category"] == selectedCategoryName).toList();
+
     return Expanded(
       child: GridView.builder(
         padding: EdgeInsets.all(16),
-        itemCount: products.length,
+        itemCount: filteredProducts.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 0.68,
@@ -167,7 +184,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisSpacing: 16,
         ),
         itemBuilder: (context, index) {
-          var p = products[index];
+          var p = filteredProducts[index];
 
           return Container(
             decoration: BoxDecoration(
@@ -183,7 +200,6 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Column(
               children: [
-                // product image
                 Container(
                   height: 130,
                   padding: EdgeInsets.all(12),
@@ -194,7 +210,6 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 5),
 
-                // product Name
                 Text(
                   p["name"],
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
@@ -202,7 +217,6 @@ class _HomePageState extends State<HomePage> {
 
                 SizedBox(height: 6),
 
-                // Price
                 Text(
                   "\$${p['price']}",
                   style: TextStyle(
@@ -214,7 +228,6 @@ class _HomePageState extends State<HomePage> {
 
                 SizedBox(height: 8),
 
-                // Add to Cart button
                 Container(
                   height: 38,
                   margin: EdgeInsets.symmetric(horizontal: 12),
@@ -237,8 +250,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // ------------------------
+  //    BOTTOM NAV BAR
+  // ------------------------
   Widget buildBottomBar() {
-   return BottomNavigationBar(
+    return BottomNavigationBar(
       currentIndex: selectedIndex,
       onTap: (value) {
         setState(() {
@@ -251,8 +267,7 @@ class _HomePageState extends State<HomePage> {
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Wishlist"),
         BottomNavigationBarItem(icon: Icon(Icons.apps), label: "Home"),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart), label: "Cart"),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
       ],
     );
