@@ -1,5 +1,6 @@
 import 'package:day7/helper.dart';
 import 'package:day7/home_page.dart';
+import 'package:day7/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -13,41 +14,41 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  bool isObscure = true;
-  bool isLoading = false;
 
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-    super.dispose();
-  }
+  bool isObscure = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(24),
           child: Card(
+            color: Colors.grey.shade300,
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Register Page",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    "Login",
+                    style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 16),
+
+                  SizedBox(height: 36),
+
                   TextField(
                     controller: emailController,
                     decoration: InputDecoration(
-                      hintText: "Enter your Email",
+                      hintText: "Enter your email",
                       border: OutlineInputBorder(),
                     ),
                   ),
+
                   SizedBox(height: 16),
+
                   TextField(
                     controller: passwordController,
                     obscureText: isObscure,
@@ -62,74 +63,46 @@ class _LoginPageState extends State<LoginPage> {
                           isObscure ? Icons.visibility : Icons.visibility_off,
                         ),
                       ),
-                      hintText: "Enter your Password",
+                      hintText: "Enter your password",
                       border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 24),
+
                   FilledButton(
-                    onPressed: isLoading
-                        ? null
-                        : () async {
-                            if (emailController.text.isEmpty ||
-                                passwordController.text.isEmpty) {
-                              showSnackBar(
-                                context,
-                                "Provide email or password",
-                              );
-                              return;
-                            }
+                    onPressed: () async {
+                      if (emailController.text.isEmpty ||
+                          passwordController.text.isEmpty) {
+                        showSnackBar(context, "Empty email or password");
+                        return;
+                      }
+                      try {
+                        final res = await Supabase.instance.client.auth.
+                        signInWithPassword(
+                          email: emailController.text,
+                          password: passwordController.text,
+                        );
 
-                            setState(() => isLoading = true);
-                            try {
-                              final res = await Supabase.instance.client.auth
-                                  .signUp(
-                                    email: emailController.text.trim(),
-                                    password: passwordController.text,
-                                  );
+                        print(res.toString);
 
-                              // Newer gotrue response doesn't expose `error` the same way.
-                              // Treat presence of a user as success.
-                              if (res.user != null) {
-                                showSnackBar(
-                                  context,
-                                  "Registration successful.",
-                                );
-                                Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePage(),
-                                  ),
-                                );
-                                emailController.clear();
-                                passwordController.clear();
-                                // Optionally navigate to login or pop:
-                                // Navigator.of(context).pushReplacementNamed('/login');
-                              } else {
-                                // No user -> failed signup. Show the response for debugging.
-                                showSnackBar(
-                                  context,
-                                  "Signup failed: ${res.toString()}",
-                                );
-                              }
-                            } catch (e) {
-                              showSnackBar(
-                                context,
-                                "Signup failed: ${e.toString()}",
-                              );
-                            } finally {
-                              if (mounted) setState(() => isLoading = false);
-                            }
-                          },
-                    child: isLoading
-                        ? SizedBox(
-                            height: 16,
-                            width: 16,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          )
-                        : Text("Register"),
+                        showSnackBar(context, "Sign in successful");
+
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
+                      } catch (e) {
+                        showSnackBar(context, "failed: ${e.toString()}");
+                      }
+                    },
+                    child: Text("Login"),
                   ),
                   SizedBox(height: 16),
-                  FilledButton(onPressed: () {}, child: Text("Login")),
+
+                  OutlinedButton(onPressed: () {
+
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> RegisterPage()));
+
+                  }, child: Text("Register")),
                 ],
               ),
             ),
