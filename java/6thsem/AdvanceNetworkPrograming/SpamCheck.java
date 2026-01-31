@@ -1,4 +1,3 @@
-package AdvanceNetwork;
 import java.net.*;
 public class SpamCheck{
      public static String BlackHole="sbl.spamhaus.org";
