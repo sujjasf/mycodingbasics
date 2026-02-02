@@ -1,28 +1,27 @@
 package unit1;
-
-import java.io.DataInputStream;
+import java.io.*;
 import java.net.*;
 
 public class MyServer {
 
     public static void main(String[] args) {
         try {
-            // Create server socket on port 6666
+            // Step 1: Create ServerSocket
             ServerSocket ss = new ServerSocket(6666);
             System.out.println("Server is waiting for client...");
 
-            // Accept client connection
+            // Step 2: Accept client connection
             Socket s = ss.accept();
-            System.out.println("Client connected!");
+            System.out.println("Client connected");
 
-            // Read data from client
-            DataInputStream dis = new DataInputStream(s.getInputStream());
-            String str = dis.readUTF();
+            // Step 3: Read data from client
+            DataInputStream dis =
+                new DataInputStream(s.getInputStream());
 
-            // Print received message
+            String str = dis.readUTF();   // receive message
             System.out.println("Message = " + str);
 
-            // Close connections
+            // Step 4: Close resources
             dis.close();
             s.close();
             ss.close();
