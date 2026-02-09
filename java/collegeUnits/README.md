@@ -28,3 +28,25 @@ cp src/unit2/backgound.jpg bin/unit2/
 
 Run:
 java -cp bin unit2.MyImage
+
+## Run JSP/Servlet on Apache Tomcat
+
+### Run JSP (quick, no compile)
+1. Install Tomcat and set CATALINA_HOME.
+2. Create a webapp directory and preserve package folders:
+   mkdir -p $CATALINA_HOME/webapps/collegeUnits/unit4
+3. Copy JSP(s) from this project:
+   cp src/unit4/bsd.jsp $CATALINA_HOME/webapps/collegeUnits/unit4/bsd.jsp
+4. Start Tomcat:
+   $CATALINA_HOME/bin/startup.sh
+5. Open in browser:
+   http://localhost:8080/collegeUnits/unit4/bsd.jsp
+
+### Run servlet (compile + deploy)
+1. Compile servlet against Jakarta Servlet API (adjust path to your servlet-api jar):
+   javac -cp /path/to/jakarta.servlet-api.jar -d build src/unit4/bsd.java
+2. Place compiled classes under WEB-INF/classes (preserve package):
+   mkdir -p $CATALINA_HOME/webapps/collegeUnits/WEB-INF/classes
+   cp -r build/unit4 $CATALINA_HOME/webapps/collegeUnits/WEB-INF/classes/
+3. If required, put Jakarta servlet JARs into WEB-INF/lib (Tomcat usually provides them).
+4. Restart Tomcat and open the same URL (servlet mapping is /bsd).
